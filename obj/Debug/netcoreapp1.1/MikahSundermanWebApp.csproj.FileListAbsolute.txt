@@ -1,0 +1,10 @@
+/Users/MikahSunderman/MikahSundermanWebApp/bin/Debug/netcoreapp1.1/MikahSundermanWebApp.deps.json
+/Users/MikahSunderman/MikahSundermanWebApp/bin/Debug/netcoreapp1.1/MikahSundermanWebApp.runtimeconfig.json
+/Users/MikahSunderman/MikahSundermanWebApp/bin/Debug/netcoreapp1.1/MikahSundermanWebApp.runtimeconfig.dev.json
+/Users/MikahSunderman/MikahSundermanWebApp/bin/Debug/netcoreapp1.1/MikahSundermanWebApp.dll
+/Users/MikahSunderman/MikahSundermanWebApp/bin/Debug/netcoreapp1.1/MikahSundermanWebApp.pdb
+/Users/MikahSunderman/MikahSundermanWebApp/obj/Debug/netcoreapp1.1/MikahSundermanWebApp.csprojResolveAssemblyReference.cache
+/Users/MikahSunderman/MikahSundermanWebApp/obj/Debug/netcoreapp1.1/MikahSundermanWebApp.csproj.CoreCompileInputs.cache
+/Users/MikahSunderman/MikahSundermanWebApp/obj/Debug/netcoreapp1.1/MikahSundermanWebApp.AssemblyInfo.cs
+/Users/MikahSunderman/MikahSundermanWebApp/obj/Debug/netcoreapp1.1/MikahSundermanWebApp.dll
+/Users/MikahSunderman/MikahSundermanWebApp/obj/Debug/netcoreapp1.1/MikahSundermanWebApp.pdb
