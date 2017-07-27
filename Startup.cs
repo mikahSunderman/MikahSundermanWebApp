@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using MikahSundermanWebApp.Models;
 
 namespace MikahSundermanWebApp
 {
@@ -29,6 +31,9 @@ namespace MikahSundermanWebApp
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddDbContext<MikahSundermanWebAppContext>(options =>
+                                                               options.UseSqlite("Data Source=MikahSundermanWebApp.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +60,9 @@ namespace MikahSundermanWebApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            DBinitialize.EnsureCreated(app.ApplicationServices);
+            SeedData.Initialize(app.ApplicationServices);
         }
     }
 }
