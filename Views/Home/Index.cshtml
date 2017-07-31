@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MikahSundermanWebApp.Models.IndexViewModel
+@{
     ViewData["Title"] = "Mikah Sunderman";
 }
 <section id="Top" class="Top">
@@ -10,62 +11,49 @@
 </section>
 <section id="Education" class="Section">
 	<h2>Education</h2>
-	<div class="container">
-		Purdue University, Fort Wayne, IN
-		<br />
-		May 2017
-		<br />
-		Bachelor of Science in Computer Science
-		<br />
-		Minor: Mathematics
-	</div>
+@foreach (var item in Model.educations)
+{
+    <div class="container">
+        @Html.DisplayFor(modelItem => item.University), @Html.DisplayFor(modelItem => item.Location)
+        <br />
+        @Html.DisplayFor(modelItem => item.GraduationDate)
+        <br />
+        @Html.DisplayFor(modelItem => item.Major)
+        <br />
+        Minor: @Html.DisplayFor(modelItem => item.Minor)
+    </div>
+}
 </section>
 <section id="Experience" class="Section">
 	<h2>Experience</h2>
+@foreach (var item in Model.workExperiences)
+{
 	<div class="container">
-        Social Media Analyst
-		<br />
-		Marketing Communications Department
-		<br />
-		Indiana University - Purdue University Fort Wayne
-		<br />
-		October 2015 - August 2016
-		<p></p>
-	</div>
-	<div class="container">
-        Teaching Assistant
+        @Html.DisplayFor(modelItem => item.Position)
         <br />
-        Computer Science Department
+        @Html.DisplayFor(modelItem => item.Employer)
         <br />
-        Indiana University - Purdue University Fort Wayne
-		<br />
-		June 2015 - January 2017
-		<p></p>
-	</div>
+        @Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)
+        <p></p>
+    </div>
+}
 </section>
 <section id="Skills" class="Section">
 	<h2>Technical Skills</h2>
 	<div class="container">
 		Programming Languages
         <ul>
-            <li>C / C++</li>
-            <li>C#</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>SQL</li>
+@foreach (var item in Model.programmingLanguages)
+{
+			<li>@Html.DisplayFor(modelItem => item.Language)</li>
+}
 		</ul>
 		Frameworks & APIs
 		<ul>
-			<li>.NET (C#)</li>
-			<li>ASP.NET</li>
-			<li>Flask</li>
-			<li>Bootstrap</li>
-			<li>Angular</li>
-			<li>DirectX</li>
-			<li>OpenGL</li>
+@foreach (var item in Model.frameworkAPIs)
+{
+            <li>@Html.DisplayFor(modelItem => item.Framework)</li>
+}
 		</ul>
 	</div>
 </section>

@@ -14,6 +14,7 @@ namespace MikahSundermanWebApp.Models
 
         [Display(Name = "Graduation Date")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MMMM yyyy}")]
         public DateTime GraduationDate { get; set; }
 
         public string Major { get; set; }
